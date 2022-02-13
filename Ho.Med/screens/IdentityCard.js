@@ -95,7 +95,7 @@ class IdentityCard extends Component {
             paddingBottom: Sizes.fixPadding + 10.0,
           }}
         >
-          Delete IdentityCard image?
+          Supprimer l'image de la carte d'identité ?
         </Text>
         <View
           style={{
@@ -166,7 +166,7 @@ class IdentityCard extends Component {
                   ...Fonts.whiteColor15Regular,
                 }}
               >
-                Delete
+                Supprimer
               </Text>
             </TouchableOpacity>
           </View>
@@ -287,7 +287,7 @@ class IdentityCard extends Component {
             <View style={styles.chooseFromCameraOrGalleryBoxStyle}>
               <View style={styles.uploadPrescriptionModalHeaderStyle}>
                 <Text style={{ ...Fonts.primaryColor20Medium }}>
-                  Upload IdentityCard
+                Télécharger la carte d'identité
                 </Text>
                 <MaterialIcons
                   name="close"
@@ -346,7 +346,7 @@ class IdentityCard extends Component {
                       ...Fonts.primaryColor19Medium,
                     }}
                   >
-                    Gallery
+                    Galerie
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -389,7 +389,7 @@ class IdentityCard extends Component {
         style={styles.uploadMorePrescriptionButtonStyle}
       >
         <Text style={{ ...Fonts.primaryColor19Medium }}>
-           Another image of your IdentityCard
+        Une autre image de votre carte d'identité
         </Text>
       </TouchableOpacity>
     );
@@ -418,7 +418,7 @@ class IdentityCard extends Component {
             ...Fonts.primaryColor18Medium,
           }}
         >
-          Please upload Images of your IdentityCard
+          Veuillez télécharger des images de votre carte d'identité
         </Text>
       </View>
     );
@@ -436,7 +436,7 @@ class IdentityCard extends Component {
               ...Fonts.whiteColor19Medium,
             }}
           >
-            Upload IdentityCard
+          Télécharger la carte d'identité
           </Text>
         </View>
         <View style={{ flexDirection: "row" }}>

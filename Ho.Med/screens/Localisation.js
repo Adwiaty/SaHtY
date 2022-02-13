@@ -28,7 +28,7 @@ export default function NotificationScreen({ navigation }) {
     (
       Location.requestForegroundPermissionsAsync().then(({ status }) => {
         if (status !== "granted") {
-          setErrorMsg("Permission to access location was denied");
+          setErrorMsg("L'autorisation d'accéder à l'emplacement a été refusée");
           return;
         }
       }).catch(() => { }).then(() => {
@@ -48,13 +48,13 @@ export default function NotificationScreen({ navigation }) {
   
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.bodyBackColor }}>
-      <View style={{ width: 420, height: 740 }}>
+      <View style={{ width: 600, height: 970 }}>
           <Picker
           selectedValue={selectedValue}
           onValueChange={(itemValue, itemIndex) => {
           setSelectedValue(itemValue)
           axios
-            .put(`http://192.168.43.184:5000/state/${id}`, { state: itemValue })
+            .put(`http://192.168.1.2:5000/state/${id}`, { state: itemValue })
             .then(() => {})
             .catch((err) => {
               console.log(err);

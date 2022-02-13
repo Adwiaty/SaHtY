@@ -32,7 +32,7 @@ export default function Footer() {
                 right: 3,
               }}
             >
-              Home
+              Accueil
             </Text>
           </Pressable>
 
@@ -59,7 +59,7 @@ export default function Footer() {
                 right: 12,
               }}
             >
-              Reminder
+              Rappel
             </Text>
           </Pressable>
 
@@ -84,7 +84,7 @@ export default function Footer() {
                 right: 20,
               }}
             >
-              Notification
+             Notification
             </Text>
           </Pressable>
           <Pressable
@@ -106,7 +106,7 @@ export default function Footer() {
                 right: 7,
               }}
             >
-              Location
+              Emplacement
             </Text>
           </Pressable>
           <Pressable
@@ -129,7 +129,7 @@ export default function Footer() {
                 right: 5,
               }}
             >
-              Profile
+              Profil
             </Text>
           </Pressable>
         </View>

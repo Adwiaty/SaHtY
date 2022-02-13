@@ -8,7 +8,6 @@ router.route("/users")
   .get(UsersController.find_All)
 
 router.route("/service").get(UsersController.find)
-router.route("/konnect").post(UsersController.konnect)
 
 
 router.route("/:userId")

@@ -16,8 +16,8 @@ const slides=[
 
     {
         key:1,
-        title:"Getting started is easy", 
-        text:"create an account to transfer your existing prescription",
+        title:"La mise en route est facile", 
+        text:"créer un compte pour transférer votre ordonnance existante",
         
         image: require("../assets/images/pharmacy_prev_ui.png"),
         imageStyle:{width:"80%",height:"60%",marginLeft:"10%",marginTop:"25%"},
@@ -27,24 +27,24 @@ const slides=[
 
     {
       key:2,
-      title:"With our sevices ",
-      text:"Your Medicines at your finger tips  . Anytime , Anywhere you need",
+      title:"Avec nos services ",
+      text:"Vos médicaments à portée de main. À tout moment, partout où vous avez besoin",
       image: require("../assets/images/key2_prev_ui.png"), 
       imageStyle:{width:"80%",height:"60%",marginLeft:"10%",marginTop:"20%"},
       
     },
     {
       key:3,
-      title:"Because we care about you",
-      text:" we notify you when you need to take your medicines",
+      title:"Parce que nous tenons à vous",
+      text:" nous vous informons lorsque vous devez prendre vos médicamentss",
       image: require("../assets/images/key3_prev_ui.png"), 
       imageStyle:{width:"80%",height:"60%",marginLeft:"10%",marginTop:"20%"}
     },
 
     {
       key:4,
-      title:"Your safety is our priority.",
-      text:"  We provide you with delivery to save your precious time ",
+      title:"Votre sécurité est notre priorité.",
+      text:"  Nous vous assurons la livraison pour vous faire gagner un temps précieux ",
       image: require("../assets/images/delivery-man_prev_ui.png"),
       },
 

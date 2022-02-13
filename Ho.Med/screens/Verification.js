@@ -82,7 +82,7 @@ class VerificationScreen extends Component {
                         ...Fonts.grayColor18Medium,
                         marginTop: Sizes.fixPadding * 2.0
                     }}>
-                        Please wait..
+                        S'il vous plaît, attendez..
                     </Text>
                 </View>
             </Dialog.Container>
@@ -107,7 +107,7 @@ class VerificationScreen extends Component {
                 }}
                 style={styles.continueButtonStyle}>
                 <Text style={{ ...Fonts.whiteColor19Medium }}>
-                    Continue
+                Continuez
                 </Text>
             </TouchableOpacity>
         )
@@ -117,10 +117,10 @@ class VerificationScreen extends Component {
         return (
             <View style={styles.resendInfoWrapStyle}>
                 <Text style={{ ...Fonts.grayColor18Medium }}>
-                    Didn’t receive otp code!
+                N'a pas reçu le code otp !
                 </Text>
                 <Text style={{ ...Fonts.grayColor18Medium, marginLeft: Sizes.fixPadding - 5.0 }}>
-                    Resend
+                Renvoyer
                 </Text>
             </View>
         )
@@ -205,13 +205,13 @@ class VerificationScreen extends Component {
                 marginHorizontal: Sizes.fixPadding * 2.0,
             }}>
                 <Text style={{ paddingBottom: Sizes.fixPadding, ...Fonts.primaryColor25Medium }}>
-                    Verification
+                Vérification
                 </Text>
                 <Text style={{
                     ...Fonts.grayColor18Medium,
                     lineHeight: 22.0,
                 }}>
-                    Enter the OTP code  we just sent you.
+                    Entrez le code OTP que nous venons de vous envoyer.
                 </Text>
             </View>
         )

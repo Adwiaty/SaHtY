@@ -9,7 +9,7 @@ const bcrypt = require("bcryptjs");
 
 
 router.post("/register", (req, res, next) => {
-  console.log("work");
+   
     let newUser = new user ({
         name: req.body.username,
         email: req.body.emailAddress,
@@ -35,12 +35,11 @@ router.post("/register", (req, res, next) => {
          
          order.create({userId:data._id})
         }
-      
     });
 });
 
 router.post("/authenticate", (req, res, next)=>{
-   console.log("working");
+    console.log("hani jit");
     const username = req.body.username;
     const password = req.body.password;
 

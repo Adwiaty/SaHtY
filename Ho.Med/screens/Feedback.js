@@ -30,7 +30,7 @@ export default function Feedback({ navigation }) {
     const feed = feedback
     try {
       console.log("hhhhhhhhffrfrht")
-      await axios.post("http://192.168.11.207:5000/feed/addfeedback" , {userId : id , content :feed})
+      await axios.post("http://192.168.1.9:5000/feed/addfeedback" , {userId : id , content :feed})
       console.log("hhhhhhhhht")
     }
     catch (err) {
@@ -58,7 +58,7 @@ export default function Feedback({ navigation }) {
           activeOpacity={0.9}
           style={styles.continueButtonStyle}
         >
-          <Text style={{ ...Fonts.whiteColor19Medium }}>Send feedback</Text>
+          <Text style={{ ...Fonts.whiteColor19Medium }}>Envoyer des commentaires</Text>
         </TouchableOpacity>
       </View>
     </View>

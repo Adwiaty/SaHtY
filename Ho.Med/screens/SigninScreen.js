@@ -81,12 +81,12 @@ class SigninScreen extends Component {
       })
       .catch((error) => {
         console.log(error);
-        this.handlemsg('Persisting login failed')
+        this.handlemsg('Échec de la connexion persistante')
       })
   }
 
 
-  handlemsg(message, typemsg = 'FAILED') {
+  handlemsg(message, typemsg = 'MANQUÉE') {
     this.setState({ message, typemsg })
 
   }
@@ -96,9 +96,9 @@ class SigninScreen extends Component {
 
     this.handlemsg(null);
     if (this.state.username == '' || this.state.password == '') {
-      this.handlemsg("Please fill all the fields")
+      this.handlemsg("Veuillez remplir tous les champs")
     }
-    const url = "http://192.168.43.184:5000/users/authenticate";
+    const url = "http://192.168.1.17:5000/users/authenticate";
     
     axios.post(url, { username: username, password: password }).then((res) => {
 
@@ -111,14 +111,14 @@ class SigninScreen extends Component {
 
       if (success !== true) {
        
-        if (this.state.message !== 'Please fill all the fields') {
-          this.handlemsg('Invalid credentials entred ')
+        if (this.state.message !== 'Veuillez remplir tous les champs') {
+          this.handlemsg('Informations d identification non valides saisies ')
         }
       } else  {
          
           if(result.user.banned){this.handlemsg('You have been banned ')}
           else{
-            this.handlemsg(`Connected ✅`, "SUCCESS")
+            this.handlemsg(`Connecté ✅`, "SUCCÈS")
         setTimeout(() => {
           // this.props.navigation.push("navbar")
           this.persistLogin(this.state.credentials)
@@ -128,8 +128,8 @@ class SigninScreen extends Component {
 
     }).catch(err => {
       console.log(err);
-      if (this.state.message !== 'Please fill all the fields') {
-        this.handlemsg('An error occured .Check your network and try again')
+      if (this.state.message !== 'Veuillez remplir tous les champs') {
+        this.handlemsg('Une erreur s est produite. Vérifiez votre réseau et réessayez')
       }
 
     })
@@ -155,7 +155,7 @@ class SigninScreen extends Component {
   usernameAddressTextField() {
     return (
       <TextInput
-        placeholder="userName"
+        placeholder="Nom d'utilisateur"
         value={this.state.username}
         onChangeText={(text) => this.setState({ username: text })}
         selectionColor={Colors.primaryColor}
@@ -167,7 +167,7 @@ class SigninScreen extends Component {
   passwordTextField() {
     return (
       <TextInput
-        placeholder="Password"
+        placeholder="Mot de passe"
         value={this.state.password}
         onChangeText={(text) => this.setState({ password: text })}
         secureTextEntry={true}
@@ -201,7 +201,7 @@ class SigninScreen extends Component {
       activeOpacity={0.9}
       style={styles.continueButtonStyle}
       >
-        <Text style={{ ...Fonts.whiteColor19Medium }}>Sign In</Text>
+        <Text style={{ ...Fonts.whiteColor19Medium }}>S'identifier</Text>
       </TouchableOpacity>
       <Line/>
       <TouchableOpacity
@@ -210,14 +210,14 @@ class SigninScreen extends Component {
       activeOpacity={0.9}
       style={styles.continueButtonStyle}
       >
-        <Text style={{ ...Fonts.whiteColor19Medium }}>Sign In with Google</Text>
+        <Text style={{ ...Fonts.whiteColor19Medium }}>Se connecter avec Google</Text>
       </TouchableOpacity>
-      <Text style={{marginLeft:80,marginTop:10}}>Don't have an accout already ? 
+      <Text style={{marginLeft:80,marginTop:10}}>Vous n'avez pas encore de compte ?
       <TextLink style={{textDecorationLine:'underline'}}
-      onPress={()=>this.props.navigation.push("registerScreen")} >Sign up</TextLink></Text>
-      <Text style={{marginLeft:80,marginTop:10}}>You forgot your password ? 
+      onPress={()=>this.props.navigation.push("registerScreen")} >S'inscrire</TextLink></Text>
+      <Text style={{marginLeft:80,marginTop:10}}>Vous avez oublié votre mot de passe ?
       <TextLink style={{textDecorationLine:'underline'}}
-      onPress={()=>this.props.navigation.push("forgotPassword")} >Forgot password</TextLink></Text>
+      onPress={()=>this.props.navigation.push("forgotPassword")} >Mot de passe oublié</TextLink></Text>
       </View>
     );
   }

@@ -76,10 +76,10 @@ class CameraScreen extends Component {
                 />
                 <View style={{ marginLeft: Sizes.fixPadding, width: width - 165.0, }}>
                     <Text style={{ paddingTop: Sizes.fixPadding - 5.0, lineHeight: 20.0, ...Fonts.primaryColor17Regular }}>
-                        Our Pharmacist will call you to confirm medicines from your prescriptions by
+                    Notre pharmacien vous appellera pour confirmer les médicaments de vos ordonnances en
                     </Text>
                     <Text style={{ ...Fonts.primaryColor18Medium }}>
-                        6:19 PM Today
+                        6:19 PM Aujourd'hui
                     </Text>
                 </View>
             </View>
@@ -98,7 +98,7 @@ class CameraScreen extends Component {
                     paddingTop: Sizes.fixPadding - 5.0,
                     paddingBottom: Sizes.fixPadding + 10.0
                 }}>
-                    Delete prescription image?
+                   Supprimer l'image de l'ordonnance ?
                 </Text>
                 <View style={{
                     flexDirection: 'row',
@@ -110,7 +110,7 @@ class CameraScreen extends Component {
                         onPress={() => this.setState({ deleteDialog: false })}
                         style={styles.noButtonStyle}>
                         <Text style={{ ...Fonts.primaryColor18Medium }}>
-                            No
+                            Non
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -121,7 +121,7 @@ class CameraScreen extends Component {
                         }}
                         style={styles.yesButtonStyle}>
                         <Text style={{ ...Fonts.whiteColor18Medium }}>
-                            Yes
+                            Oui
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -132,7 +132,7 @@ class CameraScreen extends Component {
     pescriptionsAttachedInfo() {
         return (
             <Text style={{ margin: Sizes.fixPadding * 2.0, ...Fonts.primaryColor19Medium }}>
-                Precriptions attached by you
+                Prescriptions jointes par vous
             </Text>
         )
     }
@@ -159,7 +159,7 @@ class CameraScreen extends Component {
                             style={styles.prescriptionDeleteButtonStyle}>
                             <MaterialIcons name="close" size={20} color={Colors.whiteColor} />
                             <Text style={{ marginLeft: Sizes.fixPadding - 5.0, ...Fonts.whiteColor15Regular }}>
-                                Delete
+                            Supprimer
                             </Text>
                         </TouchableOpacity>
                     </View>
@@ -258,7 +258,7 @@ class CameraScreen extends Component {
                         <View style={styles.chooseFromCameraOrGalleryBoxStyle}>
                             <View style={styles.uploadPrescriptionModalHeaderStyle}>
                                 <Text style={{ ...Fonts.primaryColor20Medium }}>
-                                    Upload Prescription
+                                Télécharger l'ordonnance
                                 </Text>
                                 <MaterialIcons name="close" size={24} color={Colors.primaryColor}
                                     onPress={() => this.setState({ uploadPrescriptionModal: false })}
@@ -292,7 +292,7 @@ class CameraScreen extends Component {
                                     }}>
                                     <MaterialIcons name="photo-album" size={24} color={Colors.primaryColor} />
                                     <Text style={{ marginLeft: Sizes.fixPadding, ...Fonts.primaryColor19Medium }}>
-                                        Gallery
+                                    Galerie
                                     </Text>
                                 </TouchableOpacity>
                             </View>
@@ -332,7 +332,7 @@ class CameraScreen extends Component {
                 onPress={() => this.setState({ validPrescriptionModal: true })}
             >
                 <Text style={{ marginTop: Sizes.fixPadding * 3.0, ...Fonts.primaryColor15Regular, marginHorizontal: Sizes.fixPadding * 2.0, }}>
-                    What is a valid prescription
+                Qu'est-ce qu'une ordonnance valide
                 </Text>
             </TouchableOpacity>
         )
@@ -345,7 +345,7 @@ class CameraScreen extends Component {
                 onPress={() => this.setState({ uploadPrescriptionModal: true })}
                 style={styles.uploadMorePrescriptionButtonStyle}>
                 <Text style={{ ...Fonts.primaryColor19Medium }}>
-                    Upload More Prescription
+                Télécharger plus de prescription
                 </Text>
             </TouchableOpacity>
         )
@@ -360,7 +360,7 @@ class CameraScreen extends Component {
                     resizeMode="contain"
                 />
                 <Text style={{ width: width - 85, paddingTop: Sizes.fixPadding, lineHeight: 22.0, marginLeft: Sizes.fixPadding, ...Fonts.primaryColor18Medium }}>
-                    Please upload Images of your prescription
+                Veuillez télécharger des images de votre ordonnance
                 </Text>
             </View>
         )
@@ -378,7 +378,7 @@ class CameraScreen extends Component {
                         marginLeft: Sizes.fixPadding + 5.0,
                         ...Fonts.whiteColor19Medium
                     }}>
-                        Upload Prescription
+                       Télécharger l'ordonnance
                     </Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>

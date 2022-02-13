@@ -3,16 +3,13 @@ import * as React from "react";
 
 import {
   SafeAreaView,
-  StatusBar,
+  
   View,
-  Animated,
+  
   Text,
-  BackHandler,
+ 
   StyleSheet,
-  TextInput,
-  Dimensions,
-  FlatList,
-  Image,
+ 
   TouchableOpacity,
 } from "react-native";
 import { Colors, Fonts, Sizes } from "../constant/styles";

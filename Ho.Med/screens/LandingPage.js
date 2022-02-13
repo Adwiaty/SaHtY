@@ -16,7 +16,7 @@ class LandingPage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Welcome to our application</Text>
+        <Text style={styles.title}>Bienvenue sur notre application</Text>
 
         <ImageBackground
           source={require("../assets/images/landing_prev_ui.png")}

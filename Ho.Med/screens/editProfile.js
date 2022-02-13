@@ -38,7 +38,7 @@ export default function EditProfile({ navigation }) {
   const getUser = async (id) => {
     // const id = userId;
     try {
-      let response = await axios.get("http://192.168.43.184:5000/user/" + id);
+      let response = await axios.get("http://192.168.1.9:5000/user/" + id);
       console.log(response.data);
       setUser(response.data);
     } catch (err) {
@@ -53,7 +53,7 @@ export default function EditProfile({ navigation }) {
     const phoneNumber = phoneNumberEdit;
     try {
       console.log("user updating...");
-      let result = await axios.put("http://192.168.43.184:5000/user/" + id, {
+      let result = await axios.put("http://192.168.1.9:5000/user/" + id, {
         username,
         email,
         phoneNumber,
@@ -101,7 +101,7 @@ export default function EditProfile({ navigation }) {
         <View style={styles.body}>
           <View style={styles.bodyContent}>
             <TouchableOpacity style={styles.buttonContainer}>
-              <Text style={{ color: "white" }}> Name : </Text>
+              <Text style={{ color: "white" }}> Nom : </Text>
               <TextInput
                 style={{ fontSize: 26 }}
                 onChangeText={(text) => setUserNameEdit(text)}

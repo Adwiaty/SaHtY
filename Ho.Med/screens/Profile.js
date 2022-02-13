@@ -115,13 +115,13 @@ export default function ProfileScreen({ navigation }) {
               style={styles.buttonContainer}
               onPress={() => navigation.navigate("feedback")}
             >
-              <Text style={{ fontSize: 15 }}> Feedback</Text>
+              <Text style={{ fontSize: 15 }}> Commentaires</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={clearLogin}
             >
-              <Text style={{ fontSize: 15 }}>Logout</Text>
+              <Text style={{ fontSize: 15 }}>Se déconnecter</Text>
             </TouchableOpacity>
           </View>
         </View>

@@ -23,7 +23,7 @@ import React, { Component } from "react";
  
 
     check=()=>{
-        setInterval(()=>{axios.get('http://192.168.43.184:5000/check/'+this.state.id).then(({data})=>{
+        setInterval(()=>{axios.get('http://192.168.1.9:5000/check/'+this.state.id).then(({data})=>{
             console.log(data);
           if(data[0].pharmacyConfirmation){   
               this.props.navigation.push("Paiment",{money:this.props.route.params.money})
@@ -38,7 +38,7 @@ render(){
 
         <View style={styles.container}>
             <LottieView source={require('../assets/loading/med.json')} autoPlay />
-            <Text>the confirmation takes few minutes</Text>
+            <Text>La confirmation prend quelques minutes</Text>
         </View>
 
 

@@ -71,7 +71,7 @@ export default class Cart extends Component {
 
   confirm() {
     axios
-      .put(`http://192.168.43.184:5000/ListOrderById/${this.state.id}`, {})
+      .put(`http://192.168.1.17:5000/ListOrderById/${this.state.id}`, {})
       .then((res) => {
       })
       .catch((err) => {
@@ -82,7 +82,7 @@ export default class Cart extends Component {
   fetchdata() {
     console.log(this.state.gov);
     axios
-      .get(`http://192.168.43.184:5000/medecine/cart/${this.state.id}`)
+      .get(`http://192.168.1.17:5000/medecine/cart/${this.state.id}`)
       .then(({ data }) => {
         var datta = data;
         for (var i = 0; i < datta.length; i++) {1
@@ -114,7 +114,7 @@ export default class Cart extends Component {
 
   delete(id) {
     axios
-      .put(`http://192.168.43.184:5000/deleteOrder/${this.state.id}`, { id: id })
+      .put(`http://192.168.1.17:5000/deleteOrder/${this.state.id}`, { id: id })
       .then(() => {
         this.fetchdata();
       });
@@ -144,7 +144,7 @@ export default class Cart extends Component {
             });
           }
           axios
-            .put(`http://192.168.43.184:5000/confirmation/${this.state.id}`, {
+            .put(`http://192.168.1.17:5000/confirmation/${this.state.id}`, {
               data: res,
               totalPrice: this.state.totalPrice,
             })
@@ -189,7 +189,7 @@ export default class Cart extends Component {
                     >
                       {item.name}
                     </Text>
-                    <Text size={29}>Price :{item.price}DT</Text>
+                    <Text size={29}>Prix :{item.price}DT</Text>
                     <Text> </Text>
                     <View style={{ flexDirection: "column" }}>
                       <MaterialCommunityIcons
@@ -199,7 +199,7 @@ export default class Cart extends Component {
                       />
                       <Text> </Text>
                       <View style={{ fontSize: 900 }}>
-                        <Text>Quantity : {item.qt}</Text>
+                        <Text>Quantité : {item.qt}</Text>
                       </View>
                       <Text> </Text>
                       <MaterialCommunityIcons
@@ -224,11 +224,11 @@ export default class Cart extends Component {
           }}
         />
         <View>
-          <Text> TotalPrice {this.state.totalPrice} DT</Text>
+          <Text> Prix total {this.state.totalPrice} DT</Text>
 
           <Button
             onPress={() => this.confirmation()}
-            title="Confirm"
+            title="Confirmer"
             color="#10857F"
             accessibilityLabel="Learn more about this purple button"
           />

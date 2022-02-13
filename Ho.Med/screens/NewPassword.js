@@ -68,7 +68,7 @@ class NewPassword extends Component {
     const password = this.state.userPassword
     try {
       console.log("user updating...")
-      let result = await axios.post("http://192.168.11.71:5000/users/password"  , {password : password , id : id})
+      let result = await axios.post("http://192.168.1.9:5000/users/password"  , {password : password , id : id})
     }
     catch (err) {
       console.log(err)

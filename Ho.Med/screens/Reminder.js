@@ -196,26 +196,26 @@ export default function ReminderScreen() {
   return (
     <View style={{ alignItems: "center" }}>
       <Text style={{ fontSize: 25 }}> Hi {userId.username} !!</Text>
-      <Text style={{ fontSize: 25 }}> this is your daily Reminder</Text>
+      <Text style={{ fontSize: 25 }}> Ceci est votre rappel quotidien</Text>
       {medAt8AM !== "" && medAt8AM !== null ? (
         <View style={styles.buttonContainer}>
-          <Text>You have {medAt8AM.split(",")[0]} at 8:00 AM</Text>
+          <Text>Vous avez {medAt8AM.split(",")[0]} à 8h00</Text>
         </View>
       ) : null}
       
       {medAt8AM !== "" && medAt8AM !== null ? (
         <View style={styles.buttonContainer}>
-          <Text>You have {medAt8AM.split(",")[1]} at 8:00 AM</Text>
+          <Text>Vous avez {medAt8AM.split(",")[1]}à 8:00 AM</Text>
         </View>
       ) : null}
       {medAt12AM !== "" ? (
         <View style={styles.buttonContainer}>
-          <Text>You have {medAt12AM} at 12:00 PM</Text>
+          <Text>Vous avez {medAt12AM} à 12:00 PM</Text>
         </View>
       ) : null}
       {medAt8PM !== "" ? (
         <View style={styles.buttonContainer}>
-          <Text>You have {medAt8PM} at 8:00 PM</Text>
+          <Text>Vous avez{medAt8PM} à 8:00 PM</Text>
         </View>
       ) : null}
       <StatusBar style="auto" />

@@ -52,7 +52,7 @@ class Navbar extends Component {
 
   fetchdata = async () => { 
     try {
-      let response = await axios.get("http://192.168.43.184:5000/medecine");
+      let response = await axios.get("http://192.168.1.17:5000/medecine");
       this.setState({ medecine: response.data });
       this.setState({ medecines: response.data });
     } catch (error) {
@@ -62,7 +62,7 @@ class Navbar extends Component {
 
   fetchParasData = async () => {
     try {
-      let response = await axios.get("http://192.168.43.184:5000/para/paras");
+      let response = await axios.get("http://192.168.1.17:5000/para/paras");
       this.setState({ medecine: response.data });
     } catch (error) {
       console.log(error);
@@ -75,7 +75,7 @@ class Navbar extends Component {
     this.incrementValue();
 
     axios
-      .put(`http://192.168.43.184:5000/OrderId/${this.state.id}`, { id })
+      .put(`http://192.168.1.17:5000/OrderId/${this.state.id}`, { id })
       .then((res) => {
         this.addProductToCart(id);
       })
@@ -109,7 +109,7 @@ class Navbar extends Component {
               }}
             />
             <Text style={[styles.socialBarLabel, styles.buyNow]}>
-              Add to cart
+              Ajouté dans la corbeille
             </Text>
           </TouchableOpacity>
         </View>
@@ -117,14 +117,14 @@ class Navbar extends Component {
     } else {
       return (
         <View>
-          <Text>Added to cart</Text>
+          <Text>Ajouté dans la corbeille</Text>
         </View>
       );
     }
   }
 
   addProductToCart = (id) => {
-    Alert.alert("Success", "The product has been added to your cart");
+    Alert.alert("Succès", "Le produit a été ajouté à votre panier");
     this.setState({ view: [...this.state.view, id] });
     console.log(this.state.view);
   };
@@ -151,7 +151,7 @@ class Navbar extends Component {
   covidMeds() {
     var res = [];
     for (var i = 0; i < this.state.medecines.length; i++) {
-      if (this.state.medecines[i].category === "COVID CARE AND PROTECTION") {
+      if (this.state.medecines[i].category === "SOIN ET PROTECTION COVID") {
         res.push(this.state.medecines[i]);
       }
     }
@@ -161,7 +161,7 @@ class Navbar extends Component {
   teethMeds() {
     var res = [];
     for (var i = 0; i < this.state.medecines.length; i++) {
-      if (this.state.medecines[i].category === "Teeth") {
+      if (this.state.medecines[i].category === "les dents") {
         res.push(this.state.medecines[i]);
       }
     }
@@ -181,7 +181,7 @@ class Navbar extends Component {
   noseMeds() {
     var res = [];
     for (var i = 0; i < this.state.medecines.length; i++) {
-      if (this.state.medecines[i].category === "Nose") {
+      if (this.state.medecines[i].category === "Nez") {
         res.push(this.state.medecines[i]);
       }
     }
@@ -191,7 +191,7 @@ class Navbar extends Component {
   eyesMeds() {
     var res = [];
     for (var i = 0; i < this.state.medecines.length; i++) {
-      if (this.state.medecines[i].category === "Eyes") {
+      if (this.state.medecines[i].category === "Yeux") {
         res.push(this.state.medecines[i]);
       }
     }
@@ -201,7 +201,7 @@ class Navbar extends Component {
   headMeds() {
     var res = [];
     for (var i = 0; i < this.state.medecines.length; i++) {
-      if (this.state.medecines[i].category === "Head") {
+      if (this.state.medecines[i].category === "Tête") {
         res.push(this.state.medecines[i]);
       }
     }
@@ -280,7 +280,7 @@ class Navbar extends Component {
                 marginLeft: Sizes.fixPadding,
               }}
               placeholderTextColor={Colors.primaryColor}
-              placeholder="Search Medicines"
+              placeholder="Rechercher des médicaments"
             />
           </TouchableOpacity>
         </View>
@@ -312,9 +312,9 @@ class Navbar extends Component {
                 }}
                 onPress={() => this.allMeds()}
               >
-                <Text>ALL</Text>
+                <Text>Tous</Text>
               </TouchableOpacity>
-              <Text style={{ marginLeft: 15, marginTop: 5 }}>ALL</Text>
+              <Text style={{ marginLeft: 15, marginTop: 5 }}>Tous</Text>
             </View>
             <View>
               <TouchableOpacity
@@ -444,7 +444,7 @@ class Navbar extends Component {
                   style={styles.noseStyle}
                 />
               </TouchableOpacity>
-              <Text style={{ marginLeft: 10, marginTop: 5 }}>HEAD</Text>
+              <Text style={{ marginLeft: 10, marginTop: 5 }}>Tête</Text>
             </View>
             <View>
               <TouchableOpacity

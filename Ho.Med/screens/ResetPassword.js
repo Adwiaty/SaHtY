@@ -69,7 +69,7 @@ class ResetPassword extends Component {
     var username = this.state.username;
     console.log('kkkkkkkkkkkkkkk', username);
     try {
-      let response = await axios.post("http://192.168.11.71:5000/users/username",{username: username});
+      let response = await axios.post("http://192.168.1.9:5000/users/username",{username: username});
           this.setState({user : response.data})
     } catch (error) {
       console.log('my errrrrrrrrrrrr',error);
@@ -116,7 +116,7 @@ class ResetPassword extends Component {
           textAlign: "center",
         }}
       >
-        Verification
+        Vérification
       </Text>
     );
   }
@@ -134,7 +134,7 @@ class ResetPassword extends Component {
       activeOpacity={0.9}
       style={styles.continueButtonStyle}
       >
-        <Text style={{ ...Fonts.whiteColor19Medium }}>Verification</Text>
+        <Text style={{ ...Fonts.whiteColor19Medium }}>Vérification</Text>
       </TouchableOpacity>
       </View>
     );

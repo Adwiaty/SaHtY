@@ -60,7 +60,7 @@ class ResetPasswordVerification extends Component {
 
     getVerificationNumber = async () => {
         try {
-          let response = await axios.get("http://192.168.11.71:5000/resetPassword");
+          let response = await axios.get("http://192.168.1.9:5000/resetPassword");
           this.setState({verifNum1 :response.data.num1});
           this.setState({verifNum2 :response.data.num2});
           this.setState({verifNum3 :response.data.num3});
@@ -107,7 +107,7 @@ class ResetPasswordVerification extends Component {
                         ...Fonts.grayColor18Medium,
                         marginTop: Sizes.fixPadding * 2.0
                     }}>
-                        Please wait..
+                        S'il vous plaît, attendez..
                     </Text>
                 </View>
             </Dialog.Container>
@@ -131,7 +131,7 @@ class ResetPasswordVerification extends Component {
                 }}
                 style={styles.continueButtonStyle}>
                 <Text style={{ ...Fonts.whiteColor19Medium }}>
-                    Continue
+                Continuez
                 </Text>
             </TouchableOpacity>
         )
@@ -141,10 +141,10 @@ class ResetPasswordVerification extends Component {
         return (
             <View style={styles.resendInfoWrapStyle}>
                 <Text style={{ ...Fonts.grayColor18Medium }}>
-                    Didn’t receive otp code!
+                N'a pas reçu le code otp !
                 </Text>
                 <Text style={{ ...Fonts.grayColor18Medium, marginLeft: Sizes.fixPadding - 5.0 }}>
-                    Resend
+                Renvoyer
                 </Text>
             </View>
         )

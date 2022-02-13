@@ -71,7 +71,7 @@ class PaymentScreen extends Component {
         showSuccessDialog: false,
     }
     konnect = ()=>{
-           axios.post("http://192.168.43.184:5000/user/konnect",this.props.route.params).then(({data})=>{
+           axios.post("http://192.168.1.9:5000/user/konnect",this.props.route.params).then(({data})=>{
              // history.push("https://www.google.com/")
             Linking.openURL(data.payUrl);
              //  window.location.href(data.payUrl)
@@ -91,13 +91,13 @@ class PaymentScreen extends Component {
                     >
                         {this.paymentMethod({
                             icon: require('../assets/images/payment_icon/cash_on_delivery.png'),
-                            paymentType: 'Pay on Delivery',
+                            paymentType: 'Payer à la livraison',
                             index: 1,
                         })}
                         
                         {this.paymentMethod({
                             icon: require('../assets/images/payment_icon/card.png'),
-                            paymentType: 'Card',
+                            paymentType: 'Carte',
                             index: 3,
                         })}
                         
@@ -121,7 +121,7 @@ class PaymentScreen extends Component {
                         <MaterialIcons name="done" size={40} color={Colors.primaryColor} />
                     </View>
                     <Text style={{ ...Fonts.grayColor18Medium, marginTop: Sizes.fixPadding + 10.0 }}>
-                        Your order has been placed!
+                    Votre commande a bien été reçue!
                     </Text>
                 </View>
             </Dialog>
@@ -139,7 +139,7 @@ class PaymentScreen extends Component {
                     }
                     style={styles.payButtonWrapStyle}>
                     <Text style={{ ...Fonts.whiteColor19Medium }}>
-                        Pay
+                    Payer
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -198,7 +198,7 @@ class PaymentScreen extends Component {
                     onPress={() => this.props.navigation.pop()}
                 />
                 <Text style={{ ...Fonts.whiteColor19Medium, marginLeft: Sizes.fixPadding + 5.0 }}>
-                    Choose Payment Option
+                Choisissez l'option de paiement
                 </Text>
             </View>
         )
